@@ -1,5 +1,7 @@
 package org.day1;
 
+import java.lang.ref.PhantomReference;
+import java.lang.ref.ReferenceQueue;
 import java.util.Scanner;
 
 public class day1 {//2.8上机
@@ -120,12 +122,33 @@ public class day1 {//2.8上机
 
 
     public static void main(String[] args) {
-        day1 day1 = new day1();
+//        day1 day1 = new day1();
         //day1.sumath();
         // day1.jiecheng();
         //day1.Fibonacci();
        // day1.view();
        // day1.mathview();
-        day1.sort();
+//        day1.sort();
+        ReferenceQueue<byte[]> queue = new ReferenceQueue();
+
+        // 虚引用必须要和引用队列一起使用，他的get方法永远返回null
+        PhantomReference<byte[]> phantomReference = new PhantomReference(new byte[1024 * 1024 * 5], queue);
+
+        System.out.println(queue.poll());
+        System.out.println(phantomReference.get());
+
+        System.gc();
+
+        try {
+            Thread.sleep(300L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(queue.poll());
+
+        queue = null;
+        phantomReference = null;
+        byte[] bytes = new byte[1024 * 1024 * 6];
     }
 }
