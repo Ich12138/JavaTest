@@ -1,52 +1,78 @@
 package org.day10;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+class Ht{
+    public int age = 0;
+}
 
 public class Demo {
-    public int findKth(int[] arr, int k) {
-        //快速排序 时间复杂度 O(nlog(n))
-        quickSort(arr, 0, arr.length-1);
+    public String[] strs = {"surprise","happy","ctrip","travel","wellcome","student","system","program","editor"};
 
-        System.out.println(Arrays.toString(arr));
-        int count = 0 ;
-        for (int v: arr) {
-            if(v%2 ==0){
-                count++;
-            }
-        }
-
-        if(count < k){
-            return 0;
-        }
-        return 1;
+    public static void main(String[] args) {
+        int res = birth();
+        System.out.println(res);
     }
 
-    //只排奇数的快排
-    public void quickSort(int[] arr,int low, int high) {
-        if(low >= high) {
-            return;
+    public static String optStr(String world) {
+        System.out.println("surprize".hashCode());
+        System.out.println("surprise".hashCode());
+        return "aaa";
+    }
+
+
+    //生海豚的题
+    public static int birth() {
+        LinkedList<Ht> htLinkedList = new LinkedList<>();
+        int i = 0;//海豚数
+        int n = 0;//海豚寿命
+        int m = 0;//海豚生宝宝的年份数量
+        int x = 0;//几年后
+        Scanner sc = new Scanner(System.in);
+        i = sc.nextInt();
+        n = sc.nextInt();
+        m = sc.nextInt();
+
+
+        for (int j = 0; j < i; j++) {
+            Ht ht = new Ht();
+            ht.age = n;
+            htLinkedList.add(ht);
         }
 
-        int key = arr[low];
-        int low1 = low;
-        int high1 = high;
-        while (low1 < high1) {
-            while (low1<high1 && key <= arr[high1] ) {
-                high1--;
-            }
-
-            arr[low1] = arr[high1];
-
-            while (key >= arr[low1] && low1< high1){
-                low1++;
-            }
-
-            arr[high1] = arr[low1];
+        int[] birthYear = new int[m];
+        for (int j = 0; j < m; j++) {
+            birthYear[j] = sc.nextInt();
         }
 
-        arr[low1] = key;
-        quickSort(arr, low, low1-1);
-        quickSort(arr, low1+1, high);
+        x = sc.nextInt();
 
+        int k = 1;//第几年
+        int l = 0;
+        while (true) {
+            if(k > x ) {
+                break;
+            }
+            if(l >= m) {
+                break;
+            }
+            if(k == birthYear[l]){
+                int num = htLinkedList.size();
+                for (int j = 0; j < num; j++) {
+                    htLinkedList.get(i).age+=k;
+                    htLinkedList.add(new Ht());
+                }
+                l++;
+            }
+
+            k++;
+
+
+        }
+
+        return htLinkedList.size();
     }
 }
