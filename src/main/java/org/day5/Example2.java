@@ -6,23 +6,24 @@ import java.util.Scanner;
 
 public class Example2 {//统计单词的频率
     int count = 0;
-    Map<String,Integer> map = new HashMap<String, Integer>();
-    String temp [] = null;
-    public void Tongji(String str){
+    Map<String, Integer> map = new HashMap<String, Integer>();
+    String temp[] = null;
+
+    public void Tongji(String str) {
         temp = str.split(" ");
         System.out.println(temp);
-        for (int i = 0; i <temp.length ; i++) {
-            if (map.containsValue(temp[i])){
-                map.put(temp[i],count++);
-            }else {
-                map.put(temp[i],1);
+        for (int i = 0; i < temp.length; i++) {
+            if (map.containsValue(temp[i])) {
+                map.put(temp[i], count++);
+            } else {
+                map.put(temp[i], 1);
             }
 
         }
 
         System.out.println("各个单词出现的次数");
-        for (String v:map.keySet()) {
-            System.out.println("单词"+v+"出现的次数："+map.get(v));
+        for (String v : map.keySet()) {
+            System.out.println("单词" + v + "出现的次数：" + map.get(v));
 
         }
     }

@@ -9,14 +9,15 @@ public class Book {
     private String pubDate;
     private double prcie;
 
-    public Book(){}
+    public Book() {
+    }
 
-    public Book(String ISBN,String title,String author,String pubDate,double prcie){
-        this.ISBN=ISBN;
-        this.title=title;
-        this.author=author;
-        this.pubDate=pubDate;
-        this.prcie=prcie;
+    public Book(String ISBN, String title, String author, String pubDate, double prcie) {
+        this.ISBN = ISBN;
+        this.title = title;
+        this.author = author;
+        this.pubDate = pubDate;
+        this.prcie = prcie;
     }
 
     public String getISBN() {

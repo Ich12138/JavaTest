@@ -1,9 +1,12 @@
 package org.day2;
 
-public class Mytest {
-    public  int age=2;
-    public Mytest(){}
-    public Mytest(int age){
+public class MyTest {
+    public int age = 2;
+
+    public MyTest() {
+    }
+
+    public MyTest(int age) {
         this.age = age;
     }
 
@@ -15,20 +18,21 @@ public class Mytest {
         this.age = age;
     }
 
-    public void Myname(){
+    public void MyName() {
 
 
         System.out.println("1111111111111");
     }
-    public  String Myage(){
 
-        String a ="aaaa";
+    public String MyAge() {
+
+        String a = "aaaa";
         return a;
     }
 
 
     public static void main(String[] args) {
-        Mytest mytest= new Mytest();
+        MyTest mytest = new MyTest();
 
 
         mytest.setAge(1);

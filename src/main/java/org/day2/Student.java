@@ -6,8 +6,8 @@ public class Student {
     private String sex;
     private int age;
 
-    public Student(int number,String clas,String sex,int age){
-        this.number=number;
+    public Student(int number, String clas, String sex, int age) {
+        this.number = number;
         this.clas = clas;
         this.sex = sex;
         this.age = age;

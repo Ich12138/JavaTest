@@ -14,12 +14,12 @@ public class Test {
         ReferenceQueue<A> referenceQueue = new ReferenceQueue<A>();
         byte[] bytes = new byte[1024 * 1024 * 6];
         A aa = new A();
-        SoftReference<A> softReference = new SoftReference<A>(aa,referenceQueue);
+        SoftReference<A> softReference = new SoftReference<A>(aa, referenceQueue);
         byte[] bytes1 = new byte[1024 * 1024 * 4];
 
     }
 }
 
-class A{
+class A {
     public int a = 100;
 }

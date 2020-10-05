@@ -4,10 +4,11 @@ public class Rectangle {
     private int lang;
     private int kuan;
 
-    public Rectangle(){
+    public Rectangle() {
 
     }
-    public Rectangle(int lang,int kuan){
+
+    public Rectangle(int lang, int kuan) {
         this.lang = lang;
         this.kuan = kuan;
 
@@ -30,15 +31,15 @@ public class Rectangle {
     }
 
     //计算周长和面积
-    public int Length(){
-        int l = (lang+kuan)*2;
+    public int Length() {
+        int l = (lang + kuan) * 2;
 
         return l;
 
     }
 
-    public int Stace(){
-        int s = lang*kuan;
+    public int Stace() {
+        int s = lang * kuan;
         return s;
     }
 

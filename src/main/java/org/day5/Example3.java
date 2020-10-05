@@ -3,11 +3,12 @@ package org.day5;
 import java.util.Random;
 
 public class Example3 {//随机生成5个不重复的小写字母 并排序
+
     public static void main(String[] args) {
         int num = 5;
-        char[] ch = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+        char[] ch = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
                 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
-                'x', 'y', 'z' };
+                'x', 'y', 'z'};
         int len = ch.length;
         char[] result = new char[num]; // 用于存放抽取结果
         boolean[] flags = new boolean[len];
@@ -28,6 +29,7 @@ public class Example3 {//随机生成5个不重复的小写字母 并排序
             System.out.print(result[i] + " ");
         }
     }
+
     private static void bubbleSort(char[] result) {//冒泡算法排序
         int len = result.length;
         for (int i = 1; i < len; i++) {

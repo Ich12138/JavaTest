@@ -4,6 +4,7 @@ import org.day3.CameraPhone;
 
 public class NokiaPhone implements CameraPhone {
     private CameraPhone Nokia;
+
     public void takePhoto() {
 
     }

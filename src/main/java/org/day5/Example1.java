@@ -4,25 +4,25 @@ import java.util.Scanner;
 
 public class Example1 {//统计字符串大小写字母个数
 
-    int Acount =0;
-    int acount =0;
+    int Acount = 0;
+    int acount = 0;
     int othercount = 0;
 
-    public void Tojiacount(String str){
-        for (int i = 0; i <str.length() ; i++) {
+    public void Tojiacount(String str) {
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (ch>='A'&& ch<='Z'){
+            if (ch >= 'A' && ch <= 'Z') {
                 Acount++;
-            }
-            else if (ch>='a'&& ch<='z'){
+            } else if (ch >= 'a' && ch <= 'z') {
                 acount++;
-            }else {
+            } else {
                 othercount++;
             }
 
         }
-        System.out.println("大写字母的个数："+Acount+"  "+"小写字母的个数"+acount+" "+"非英文字母的个数"+othercount);
+        System.out.println("大写字母的个数：" + Acount + "  " + "小写字母的个数" + acount + " " + "非英文字母的个数" + othercount);
     }
+
     public static void main(String[] args) {
 
         System.out.println("==========================1==========================");

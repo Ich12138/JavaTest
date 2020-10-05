@@ -7,9 +7,10 @@ public class Employee {
     private double salary;
 
 
-    public Employee(){}
+    public Employee() {
+    }
 
-    public Employee(String sid,String sname,String position,double salary){
+    public Employee(String sid, String sname, String position, double salary) {
         this.sid = sid;
         this.sname = sname;
         this.position = position;

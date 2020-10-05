@@ -42,7 +42,6 @@ public abstract class Animal implements Runnable {
     }
 
 
-
     public abstract void run();
 
     //判断是否完成比赛

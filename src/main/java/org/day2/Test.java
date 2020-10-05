@@ -4,7 +4,7 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("=====================1=========================");
         //第一小一题
-        Student student = new Student(123456,"网络1602","女",18);
+        Student student = new Student(123456, "xxx", "xx", 18);
         System.out.println(student.toString());
 
         //第二小题
@@ -23,9 +23,9 @@ public class Test {
 
         //第三小题
         System.out.println("=====================3=========================");
-        Rectangle rectangle = new Rectangle(12,6);
-        System.out.println("该矩形的周长为："+rectangle.Length());
-        System.out.println("该矩形的面积为："+rectangle.Stace());
+        Rectangle rectangle = new Rectangle(12, 6);
+        System.out.println("该矩形的周长为：" + rectangle.Length());
+        System.out.println("该矩形的面积为：" + rectangle.Stace());
 
     }
 }

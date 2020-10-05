@@ -10,6 +10,7 @@ public class Tortoise extends Animal {
     Tortoise(String name, int speed, ExecutorService executor, CyclicBarrier barrier) {
         super(name, speed, executor, barrier);
     }
+
     Tortoise(String name, int speed, ExecutorService executor) {
         super(name, speed, executor);
     }
@@ -26,10 +27,10 @@ public class Tortoise extends Animal {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(sdf.format(System.currentTimeMillis()));
         while (!FINISH) {
-            System.out.println(this.name + " : 我的速度是：" + this.speed + " 米，我跑了"+this.now+"米" );
+            System.out.println(this.name + " : 我的速度是：" + this.speed + " 米，我跑了" + this.now + "米");
 
             try {
-                if (this.now%100==0){
+                if (this.now % 100 == 0) {
                     Thread.sleep(500);
                 }
 

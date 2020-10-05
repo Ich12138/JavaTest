@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Example5 {//日期相关的方法类
 
-    public static void Tonight(){
+    public static void Tonight() {
 
         Date today = new Date();
 //        System.out.println(new SimpleDateFormat
@@ -16,7 +16,7 @@ public class Example5 {//日期相关的方法类
         System.out.println(new SimpleDateFormat("yyyy年 MM月 dd日").format(yesterday));
     }
 
-    public static void Firstday(){
+    public static void Firstday() {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy年 MM月 dd日");
         Calendar cal = Calendar.getInstance();
@@ -31,11 +31,11 @@ public class Example5 {//日期相关的方法类
 
     }
 
-    public static void FirstMonth(){
+    public static void FirstMonth() {
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy年 MM月 dd日");
 
-        Calendar cale ;
+        Calendar cale;
 
         cale = Calendar.getInstance();
         cale.add(Calendar.MONTH, 0);
@@ -47,18 +47,18 @@ public class Example5 {//日期相关的方法类
 
     }
 
-    public static void LastMonth(){
+    public static void LastMonth() {
         SimpleDateFormat format = new SimpleDateFormat("yyyy年 MM月 dd日");
-        Calendar   cale=Calendar.getInstance();//获取当前日期
+        Calendar cale = Calendar.getInstance();//获取当前日期
         cale.add(Calendar.MONTH, -1);
-        cale.set(Calendar.DAY_OF_MONTH,1);//设置为1号,当前日期既为本月第一天
+        cale.set(Calendar.DAY_OF_MONTH, 1);//设置为1号,当前日期既为本月第一天
         String firstDay = format.format(cale.getTime());
         System.out.println("前一个月的第一天");
         System.out.println(firstDay);
 
     }
 
-    public static void lastWeekend(){
+    public static void lastWeekend() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy年 MM月 dd日");
         Calendar cal = Calendar.getInstance();
         String firstday = sdf.format(cal.getTime());

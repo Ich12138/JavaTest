@@ -35,8 +35,8 @@ public class Example4 {//返回两个给定日期相差的天数
         String newDate = scanner1.nextLine();
 
 
-        System.out.println(oldDate+","+newDate);
-        int day = Example4.comparePastDate(oldDate,newDate);
+        System.out.println(oldDate + "," + newDate);
+        int day = Example4.comparePastDate(oldDate, newDate);
         System.out.println(day);
     }
 }

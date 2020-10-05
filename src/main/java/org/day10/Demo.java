@@ -26,7 +26,7 @@ public class Demo {
 
     //生海豚的题
     public static int birth() {
-        LinkedList<Ht> htLinkedList = new LinkedList<>();
+        LinkedList<Ht> htLinkedList = new LinkedList();
         int i = 0;//海豚数
         int n = 0;//海豚寿命
         int m = 0;//海豚生宝宝的年份数量

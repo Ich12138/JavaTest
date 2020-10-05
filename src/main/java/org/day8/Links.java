@@ -1,21 +1,23 @@
 package org.day8;
 
 
-
 import java.util.LinkedList;
 
 public class Links {
-    LinkedList lk=new LinkedList();
+    LinkedList lk = new LinkedList();
+
     public void push(Object o) {
 
         // 添加
-       lk.addFirst(o);
+        lk.addFirst(o);
     }
+
     public void pop() {
 
         // 移除
         lk.removeFirst();
     }
+
     public static void main(String[] args) {
         // 使用  LinkedList实现堆栈
         // 入栈  出栈
@@ -31,7 +33,7 @@ public class Links {
     		l.removeFirst(); */
 
         //实例化 当前对象 Test
-       Links link =new Links();// 添加数据 1 2 3 4
+        Links link = new Links();// 添加数据 1 2 3 4
         link.push("1");
         link.push("2");
         link.push("3");

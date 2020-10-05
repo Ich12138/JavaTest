@@ -17,7 +17,7 @@ public class CharCopy {
         }
     }
 
-    public void copy1() throws Exception{
+    public void copy1() throws Exception {
         //构建字符输入流对象
         FileReader fr =
                 new FileReader("/home/wwj/File/hhh");
@@ -27,20 +27,20 @@ public class CharCopy {
                 new FileWriter("/home/wwj/File/aaa");
 
         //读取单个字符
-        int value=fr.read();
+        int value = fr.read();
 
         //输出单个字符
-        while(value!=-1){
+        while (value != -1) {
             fw.write(value);
             fw.flush();
-            value=fr.read();
+            value = fr.read();
         }
 
         fr.close();
         fw.close();
     }
 
-    public void copy2() throws Exception{
+    public void copy2() throws Exception {
         //构建字符输入流对象
         FileReader fr =
                 new FileReader("/home/wwj/File/hhh");
@@ -49,14 +49,14 @@ public class CharCopy {
         FileWriter fw =
                 new FileWriter("/home/wwj/File/aaa");
         //构建字符数组
-        char [] chars = new char[1024];
+        char[] chars = new char[1024];
         //把读取的字符存入字符数组中
-        int len =fr.read(chars);
+        int len = fr.read(chars);
         //把字符数组中的数据写出
-        while(len!=-1){
+        while (len != -1) {
             fw.write(chars, 0, len);
             fw.flush();
-            len =fr.read(chars);
+            len = fr.read(chars);
         }
         //关闭流操作
         fr.close();

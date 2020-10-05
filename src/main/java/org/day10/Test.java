@@ -10,16 +10,16 @@ public class Test {
         System.out.println(res);
     }
 
-    public static int getDivision(int n){
-        try{
-            n+=1;
-            if(n/0 > 0){
-                n+=10;
+    public static int getDivision(int n) {
+        try {
+            n += 1;
+            if (n / 0 > 0) {
+                n += 10;
             } else {
-                n-=10;
+                n -= 10;
             }
             return n;
-        }catch(Exception e){
+        } catch (Exception e) {
             n++;
         }
         n++;

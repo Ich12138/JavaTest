@@ -7,13 +7,13 @@ import org.day3.animal.Fish;
 public class Zoo {
 
     public static void main(String[] args) {
-        Animal animal1 = new Animal("AA",4);
-        Animal animal2 = new Animal("BB",5);
+        Animal animal1 = new Animal("AA", 4);
+        Animal animal2 = new Animal("BB", 5);
 
-        Bird bird1 = new Bird("bird1",6);
+        Bird bird1 = new Bird("bird1", 6);
         Bird bird2 = new Bird();
 
-        Fish fish1 = new Fish("sasa",2);
+        Fish fish1 = new Fish("sasa", 2);
         Fish fish2 = new Fish();
 
         animal1.getLegs();

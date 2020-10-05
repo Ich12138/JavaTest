@@ -1,6 +1,6 @@
 package org.day6.Jiouthread;
 
-public class PrintEven implements Runnable{
+public class PrintEven implements Runnable {
     Num num;
 
     public PrintEven(Num num) {
@@ -19,15 +19,15 @@ public class PrintEven implements Runnable{
                     }
 
 
-            } else{
-                System.out.println("偶数----" + num.i);
-                num.i++;
-                num.flag = false;
-                num.notify();
+                } else {
+                    System.out.println("偶数----" + num.i);
+                    num.i++;
+                    num.flag = false;
+                    num.notify();
+                }
             }
         }
     }
-}
 
 }
 

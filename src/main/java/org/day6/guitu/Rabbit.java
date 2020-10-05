@@ -28,9 +28,9 @@ public class Rabbit extends Animal {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(sdf.format(System.currentTimeMillis()));
         while (!FINISH) {
-            System.out.println(this.name + " : 我的速度是：" + this.speed + " 米，我跑了"+this.now+"米" );
+            System.out.println(this.name + " : 我的速度是：" + this.speed + " 米，我跑了" + this.now + "米");
             try {
-                if (this.now==20){
+                if (this.now == 20) {
                     Thread.sleep(500);
                 }
 
