@@ -14,9 +14,11 @@ public class Client {
         //创建套接字,连接服务端
         Socket client = new Socket("localhost", 8080);
 
-        //获取客户端的输出流
+        //获取客户端的输出流, 发送数据
         OutputStream out = client.getOutputStream();
-        out.write("UserServiceImpl:findUserById:123".getBytes());
+        String requestData = "UserServiceImpl:findUserById:123";
+        System.out.println("Rpc-Demo1--->客户端发送的数据: " + requestData);
+        out.write(requestData.getBytes());
         out.flush();
 
         //获取客户端输入流
@@ -28,7 +30,7 @@ public class Client {
         String userInfo = new String(data, "utf-8");
 
         //接收服务端的返回数据
-        System.out.println("接收服务端的返回数据: " + userInfo);
+        System.out.println("Rpc-Demo1--->接收服务端的返回数据: " + userInfo);
 
         //客户端进行数据处理
         String[] userInfoArray = userInfo.split(":");
@@ -36,7 +38,7 @@ public class Client {
                 .userNo(Integer.parseInt(userInfoArray[0]))
                 .name(userInfoArray[1])
                 .build();
-        System.out.println("客户端处理结果: " + user.toString());
+        System.out.println("Rpc-Demo1--->客户端处理结果: " + user.toString());
         client.close();
     }
 }
