@@ -11,7 +11,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public User findUserById(Integer id) {
         //查询数据库
-        //进行业务
+        //进行业务处理
         return new User(id, "张三");
     }
 }
