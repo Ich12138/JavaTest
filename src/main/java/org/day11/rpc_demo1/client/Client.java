@@ -23,17 +23,20 @@ public class Client {
         InputStream in = client.getInputStream();
         byte[] data = new byte[1024];
 
-
         //将服务端的数据读入data数组
         in.read(data);
         String userInfo = new String(data, "utf-8");
-        System.out.println(userInfo);
+
+        //接收服务端的返回数据
+        System.out.println("接收服务端的返回数据: " + userInfo);
+
+        //客户端进行数据处理
         String[] userInfoArray = userInfo.split(":");
         User user = User.builder()
                 .userNo(Integer.parseInt(userInfoArray[0]))
                 .name(userInfoArray[1])
                 .build();
-        System.out.println(user.toString());
+        System.out.println("客户端处理结果: " + user.toString());
         client.close();
     }
 }
