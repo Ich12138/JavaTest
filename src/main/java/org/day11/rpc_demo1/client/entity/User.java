@@ -1,4 +1,4 @@
-package org.day11.rpc_demo1.entity;
+package org.day11.rpc_demo1.client.entity;
 
 import lombok.*;
 
