@@ -58,16 +58,20 @@ public class Server {
 
         //函数调用, 获取结果
         Method method1 = reflectClass.getMethod(methodName, Integer.class);
-        User o = (User) method1.invoke(iUserServiceInfo, userNo);
+        User user = (User) method1.invoke(iUserServiceInfo, userNo);
 
         //服务端业务处理结果
-        System.out.println("Rpc-Demo1--->服务端业务处理结果: " + o.toString());
+        System.out.println("Rpc-Demo1--->服务端业务处理结果: " + user.toString());
 
         //数据封装并写回
-        StringBuffer outData = new StringBuffer();
-        outData.append(o.getUserNo())
+        StringBuilder outData = new StringBuilder();
+        outData.append(user.getUserNo())
                 .append(":")
-                .append(o.getName());
+                .append(user.getName())
+                .append(":")
+                .append(user.getAge())
+                .append(":")
+                .append(user.getGender());
         OutputStream out = clientSocket.getOutputStream();
         System.out.println("Rpc-Demo1--->服务端返回的结果: " + outData.toString());
         out.write(outData.toString().getBytes());
