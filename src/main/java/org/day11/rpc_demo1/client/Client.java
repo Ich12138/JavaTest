@@ -4,6 +4,7 @@ import org.day11.rpc_demo1.client.entity.User;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @Author WangQian
@@ -27,7 +28,7 @@ public class Client {
 
         //将服务端的数据读入data数组
         in.read(data);
-        String userInfo = new String(data, "utf-8");
+        String userInfo = new String(data, StandardCharsets.UTF_8);
 
         //接收服务端的返回数据
         System.out.println("Rpc-Demo1--->客户端接收的数据: " + userInfo);
@@ -37,6 +38,8 @@ public class Client {
         User user = User.builder()
                 .userNo(Integer.parseInt(userInfoArray[0]))
                 .name(userInfoArray[1])
+                .age(Integer.parseInt(userInfoArray[2]))
+                .gender(userInfoArray[3])
                 .build();
         System.out.println("Rpc-Demo1--->客户端处理结果: " + user.toString());
         client.close();
