@@ -12,6 +12,6 @@ public class UserServiceImpl implements IUserService {
     public User findUserById(Integer id) {
         //查询数据库
         //进行业务处理
-        return new User(id, "张三");
+        return new User(id, "张三",18, "男");
     }
 }
