@@ -1,4 +1,4 @@
-package org.day11.rpc_demo2.entity;
+package org.day11.rpc_demo2.client.entity;
 
 import lombok.*;
 
@@ -21,4 +21,12 @@ public class UserInfo {
      * 姓名
      */
     private String name;
+    /**
+     * 年龄
+     */
+    private Integer age;
+    /**
+     * 性别
+     */
+    private String gender;
 }
