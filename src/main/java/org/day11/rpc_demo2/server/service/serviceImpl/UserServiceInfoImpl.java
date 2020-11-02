@@ -1,6 +1,6 @@
 package org.day11.rpc_demo2.server.service.serviceImpl;
 
-import org.day11.rpc_demo2.entity.UserInfo;
+import org.day11.rpc_demo2.server.entity.UserInfo;
 import org.day11.rpc_demo2.server.service.IUserServiceInfo;
 
 /**
@@ -12,6 +12,6 @@ public class UserServiceInfoImpl implements IUserServiceInfo {
     public UserInfo findUserById(Integer id) {
         //查询数据库
         //进行业务
-        return new UserInfo(id, "张三");
+        return new UserInfo(id, "小红", 20, "女");
     }
 }
