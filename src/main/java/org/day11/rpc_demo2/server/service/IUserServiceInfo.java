@@ -1,6 +1,6 @@
 package org.day11.rpc_demo2.server.service;
 
-import org.day11.rpc_demo2.entity.UserInfo;
+import org.day11.rpc_demo2.server.entity.UserInfo;
 
 /**
  * @Author WangQian
